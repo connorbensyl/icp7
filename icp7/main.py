@@ -39,6 +39,7 @@ html = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(html, "html.parser")
 text = soup.text
 text_tokens = nl.word_tokenize(text)
+file.write(text_tokens)
 print(text_tokens)
 pos = nl.pos_tag(text_tokens)
 print(pos)
